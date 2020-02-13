@@ -2,6 +2,9 @@
 
 #include "audio.h"
 
+#define LINEVOL 0x17
+#define OUTVOL 0x7F
+
 volatile int16_t audio_chR=0;    //16 bits audio data channel right
 volatile int16_t audio_chL=0;    //16 bits audio data channel left
 
@@ -23,7 +26,11 @@ i2s_tx(audio_OUT);
 int main(void)
 {
 	gpio_set_mode(TEST_PIN,Output);
-  audio_init ( hz48000, line_in, intr, I2S_HANDLER); 
+  audio_init ( hz48000, line_in, intr, I2S_HANDLER);
+  Codec_WriteRegister ( WM8731_LLINEIN, LINEVOL);
+  Codec_WriteRegister ( WM8731_RLINEIN, LINEVOL);
+  Codec_WriteRegister ( WM8731_LHEADOUT, OUTVOL);
+  Codec_WriteRegister ( WM8731_RHEADOUT, OUTVOL);
  
   while(1){}
 }
