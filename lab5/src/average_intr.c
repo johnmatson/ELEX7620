@@ -37,11 +37,11 @@ audio_chR = ((audio_IN >>16)& 0x0000FFFF); //Separate 16 bits channel right
 		//Don't forget to check k and make sure you don't create an out-of-range index on x[]
 		//Store the filter output in the variable yn
 
-	for (int i=0; i<(M+1); i++)
+	for (i=0; i<(M+1); i++)
 	{
 		yn += x[i];
 	}
-	yn = yn / (M+1);
+	yn = yn / ((float32_t)(M+1));
     
 		//Write filter output yn to the DAC
  	  audio_chL= (int16_t)(yn);
