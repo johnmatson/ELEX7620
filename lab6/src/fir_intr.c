@@ -44,9 +44,13 @@ audio_chR = ((audio_IN >>16)& 0x0000FFFF);
 		//Don't forget to check k and make sure you don't create an out-of-range index on x[]
 		//Store the filter output in the variable yn
 		//Use discrete time convolution as noted in the lab manual
+		
 		for (i=0;i<21;i++)
 		{
-			yn+=x[i]*h[i];
+			int sampleIndex = k-i;
+			if(sampleIndex<0)
+				sampleIndex += 21;
+			yn += h[i] * x[sampleIndex];
 		}
     
 		//Write filter output yn to the DAC
