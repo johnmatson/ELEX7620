@@ -3,7 +3,7 @@
 
 #include "audio.h"
 
-#include "lab6coeffs.h"
+#include "lab7coeffs.h"
 
 #define LINEVOL 0x17
 #define OUTVOL 0x7F
