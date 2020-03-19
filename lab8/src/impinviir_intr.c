@@ -2,6 +2,9 @@
 
 #include "audio.h"
 
+#define LINEVOL 0x17
+#define OUTVOL 0x7F
+
 #define Y1 0.8123
 #define Y2 -0.4617
 #define X0 0.1290
@@ -11,12 +14,13 @@
 volatile int16_t audio_chR=0;    
 volatile int16_t audio_chL=0;    
 
+float32_t x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+
 void I2S_HANDLER(void) {  
 
 int16_t audio_out_chL = 0;
 int16_t audio_out_chR = 0;
 float32_t xn, yn;
-float32_t x1 = 0, x2 = 0, y1 = 0, y2 = 0;
 	
 audio_IN = i2s_rx();	
 audio_chL = (audio_IN & 0x0000FFFF);       //Separate 16 bits channel left
@@ -26,11 +30,10 @@ xn = (float32_t)(audio_chL);  // Compute only the left channel
 
 	// implement the difference equation for the IIR filter
 
-	x2 = x1;
-	x1 = xn;
-
 	yn = Y1*y1 + Y2*y2 + X0*xn + X1*x1 + X2*x2;
 
+	x2 = x1;
+	x1 = xn;
 	y2 = y1;
 	y1 = yn;
 

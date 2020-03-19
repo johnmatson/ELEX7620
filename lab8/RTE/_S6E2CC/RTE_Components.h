@@ -1,6 +1,6 @@
 
 /*
- * Auto generated Run-Time-Environment Component Configuration File
+ * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
  * Project: 'DSP_LiB' 
@@ -15,6 +15,7 @@
  * Define the Device Header File: 
  */
 #define CMSIS_device_header "s6e2cc.h"
+
 
 
 #endif /* RTE_COMPONENTS_H */
