@@ -148,7 +148,24 @@
           <Name>-S0 -C0 -P0 ) -FN4 -FC1000 -FD2003C000 -FF0S6E2CC_MACRO0_1024KB -FF1S6E2CC_MACRO1_1024KB -FF2S6E2CC_MACRO0_8KB -FF3S6E2CC_MACRO1_32KB -FL0100000 -FL1100000 -FL22000 -FL38000 -FS00 -FS1100000 -FS2406000 -FS3408000 -FP0($$Device:S6E2CCAJ0A$Flash\S6E2CC_MACRO0_1024KB.FLM) -FP1($$Device:S6E2CCAJ0A$Flash\S6E2CC_MACRO1_1024KB.FLM) -FP2($$Device:S6E2CCAJ0A$Flash\S6E2CC_MACRO0_8KB.FLM) -FP3($$Device:S6E2CCAJ0A$Flash\S6E2CC_MACRO1_32KB.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>38</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>736</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\src\dft.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\DSP_LiB\src/dft.c\38</Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>

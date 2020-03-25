@@ -1,6 +1,6 @@
 Dependencies for Project 'DSP_LiB', Target 'S6E2CC': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (.\src\dft.c)(0x5E7BAE60)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O3 --apcs=interwork -I .\drivers -I .\RTE\Device\S6E2CCAJ0A-I.\RTE\Device\S6E2CCAJ0A-I.\RTE\_S6E2CC-I"C:\Users\John Matson\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\DSP\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\Keil\FM4_DFP\1.6.0\Device\S6E2CC\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\Keil\FM4_DFP\1.6.0\Device\Include\S6E2CC"-D__UVISION_VERSION="529" -D_RTE_ -DS6E2CCAJ0A-o .\obj\dft.o --omf_browse .\obj\dft.crf --depend .\obj\dft.d)
+F (.\src\dft.c)(0x5E7BBAC0)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O3 --apcs=interwork -I .\drivers -I .\RTE\Device\S6E2CCAJ0A-I.\RTE\Device\S6E2CCAJ0A-I.\RTE\_S6E2CC-I"C:\Users\John Matson\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\DSP\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\Keil\FM4_DFP\1.6.0\Device\S6E2CC\Include"-I"C:\Users\John Matson\AppData\Local\Arm\Packs\Keil\FM4_DFP\1.6.0\Device\Include\S6E2CC"-D__UVISION_VERSION="529" -D_RTE_ -DS6E2CCAJ0A-o .\obj\dft.o --omf_browse .\obj\dft.crf --depend .\obj\dft.d)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9BB312)
 I (.\drivers\platform.h)(0x55CE762C)
 I (.\drivers\gpio.h)(0x5595B90C)

@@ -17,12 +17,13 @@ typedef struct complex_t  {
 } complex_t;
 
 complex_t samples[N];
-complex_t X[N];
+//complex_t X[N];
 
+/*
 void dft(complex_t *x)  {
 	float ohmegaNot = 2*PI/N; // bin spacing constant
-	int k; // DFT sums over k
-	int n; // sample number
+	int k; // sample number
+	int n; // DFT sums over n
 
 	// implement DFT equation
 	for (k = 0; k<N; k++) {
@@ -32,24 +33,29 @@ void dft(complex_t *x)  {
 		}
 	}
 }
+*/
 
-/*
 void dft(complex_t *x)  {
 	float ohmegaNot = 2*PI/N; // bin spacing constant
-	int k; // DFT sums over k
-	int n; // sample number
-	float x_temp;
+	int k; // sample number
+	int n; // DFT sums over n
+	float x_temp[N]; // temporary input sample array
+	
+	// write to temporary sample array
+	for (k = 0; k<N; k++) {
+		x_temp[k] = x[k].real;
+		x[k].real = 0;
+	}
 
 	// implement DFT equation
 	for (k = 0; k<N; k++) {
 		for (n = 0; n<N; n++) {
-			x_temp = x[n].real;
-			x[k].real += x_temp * cos(k*ohmegaNot*n);
-			x[k].imag += x_temp * -sin(k*ohmegaNot*n);
+			x[k].real += x_temp[n] * cos(k*ohmegaNot*n);
+			x[k].imag += x_temp[n] * -sin(k*ohmegaNot*n);
 		}
 	}
 }
-*/
+
 
 int main()  {
 	int n;
