@@ -25,8 +25,8 @@ void dft(complex_t *x)  {
 	// implement DFT equation
 	for (int k = 0; k<N; k++) {
 		for (int n = 0; n<N; n++) {
-			X[k].real += x[n].real * cos(-k*ohmegaNot*n);
-			X[k].imag += x[n].real * sin(-k*ohmegaNot*n);
+			X[k].real += x[n].real * cos(k*ohmegaNot*n);
+			X[k].imag += x[n].real * -sin(k*ohmegaNot*n);
 		}
 	}
 
